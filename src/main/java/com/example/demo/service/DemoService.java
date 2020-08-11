@@ -8,14 +8,13 @@ import org.springframework.web.client.HttpClientErrorException;
 public class DemoService {
 
 	
-	public int i=3;
+	public int i=-1;
 	
 	
 	public String invokeCallWithCB() {
 		i++;
-		System.out.println(i);
 		
-		if(i%2 ==0 && i<20 )
+		if(i>3 && i<9 )
 			throw new HttpClientErrorException(HttpStatus.BAD_GATEWAY);
 		
 	
